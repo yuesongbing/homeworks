@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var str = 'getDuanXian';
+        function trans(str) {
+        var len = str.length;
+        var strnew = '';
+        for (var i = 0; i < len; i++) {
+            if (str.charCodeAt(i) < 90) {
+            var change = str[i].toLowerCase()
+            strnew += `-${change}`;
+            } else {
+            strnew += str[i]
+            }
+        }
+        return strnew;
+        }
+        console.log(trans(str));
+    </script>
+</body>
+</html>
